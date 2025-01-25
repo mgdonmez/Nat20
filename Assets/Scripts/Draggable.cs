@@ -28,7 +28,6 @@ public class Draggable : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        //Debug.Log("ONMOUSEDOWN");
         isDragged = true;
         transform.DOScale(hoverScale, 0.3f);
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
@@ -37,8 +36,6 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        //Debug.Log("OnMouseDrag");
-
         if (isDragged)
         {
             transform.localPosition = spriteDragStartPosition + (Camera.main.ScreenToWorldPoint( Input.mousePosition ) - mouseDragStartPosition );
@@ -47,7 +44,6 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseUp()
     {
-        //Debug.Log("OnMouseUp");
         transform.DOScale(startingScale, 0.3f);
         isDragged = false;
     }

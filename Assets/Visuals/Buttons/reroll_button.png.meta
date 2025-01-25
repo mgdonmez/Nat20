@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      reroll_button_0: -3328273584965633111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
