@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: ff93a666fb939434fb7b558fd8cd017d
+guid: 095cc9c55d9b4db4a8d9d11f65d0135a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8296385383580801948
-    second: walk_0
+      213: 2145900757829981268
+    second: Smily_negative_0
   - first:
-      213: 3218353051568008401
-    second: walk_1
+      213: -8167862118004283281
+    second: Smily_negative_1
   - first:
-      213: 6971375644381031630
-    second: walk_2
+      213: -4258654241610821850
+    second: Smily_negative_2
   - first:
-      213: -3714987382563562326
-    second: walk_3
+      213: 5188299111358659627
+    second: Smily_negative_3
   - first:
-      213: -2044624726750869082
-    second: walk_4
+      213: 6359665371206347841
+    second: Smily_negative_4
   - first:
-      213: -1800561202758830752
-    second: walk_5
+      213: 9142904530708433883
+    second: Smily_negative_5
   - first:
-      213: -7072565547094396234
-    second: walk_6
+      213: 8064138167030726200
+    second: Smily_negative_6
   - first:
-      213: -6780060589664581786
-    second: walk_7
+      213: 6598404433128561113
+    second: Smily_negative_7
+  - first:
+      213: -4161523873836657051
+    second: Smily_negative_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -173,123 +176,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_0
+      name: Smily_negative_0
       rect:
         serializedVersion: 2
-        x: 98
-        y: 52
-        width: 96
-        height: 138
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4646ce323715ddc80800000000000000
-      internalID: -8296385383580801948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_1
-      rect:
-        serializedVersion: 2
-        x: 405
-        y: 55
-        width: 82
-        height: 141
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1dc61808c03e9ac20800000000000000
-      internalID: 3218353051568008401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_2
-      rect:
-        serializedVersion: 2
-        x: 724
-        y: 54
-        width: 56
-        height: 144
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ecc242f663d4fb060800000000000000
-      internalID: 6971375644381031630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_3
-      rect:
-        serializedVersion: 2
-        x: 1025
-        y: 53
-        width: 75
-        height: 138
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aac9d3d88a6b17cc0800000000000000
-      internalID: -3714987382563562326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_4
-      rect:
-        serializedVersion: 2
-        x: 1314
-        y: 52
-        width: 99
-        height: 141
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a9c807d4a800a3e0800000000000000
-      internalID: -2044624726750869082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_5
-      rect:
-        serializedVersion: 2
-        x: 1625
-        y: 52
+        x: 366
+        y: 87
         width: 88
-        height: 146
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 065b539302f1307e0800000000000000
-      internalID: -1800561202758830752
+      spriteID: 45492b9ae55c7cd10800000000000000
+      internalID: 2145900757829981268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_6
+      name: Smily_negative_1
       rect:
         serializedVersion: 2
-        x: 1908
-        y: 53
-        width: 95
-        height: 146
+        x: 670
+        y: 87
+        width: 88
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b2b5c26b1339dd90800000000000000
-      internalID: -7072565547094396234
+      spriteID: f682cf9cdace5ae80800000000000000
+      internalID: -8167862118004283281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_7
+      name: Smily_negative_2
       rect:
         serializedVersion: 2
-        x: 2245
-        y: 54
-        width: 65
-        height: 141
+        x: 695
+        y: 128
+        width: 200
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,8 +235,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 667ca65e0d268e1a0800000000000000
-      internalID: -6780060589664581786
+      spriteID: 62f8393d78836e4c0800000000000000
+      internalID: -4258654241610821850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smily_negative_3
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 87
+        width: 88
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2cf1019d8a800840800000000000000
+      internalID: 5188299111358659627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smily_negative_4
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 128
+        width: 200
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c6b1dc5f1124850800000000000000
+      internalID: 6359665371206347841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smily_negative_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 39
+        width: 93
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb8f20ca3f12ee70800000000000000
+      internalID: 9142904530708433883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smily_negative_6
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 39
+        width: 93
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e3981ffe299ef60800000000000000
+      internalID: 8064138167030726200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smily_negative_7
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 39
+        width: 93
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d99df04fdd329b50800000000000000
+      internalID: 6598404433128561113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smily_negative_8
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 39
+        width: 93
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56698afd51c4f36c0800000000000000
+      internalID: -4161523873836657051
       vertices: []
       indices: 
       edges: []
@@ -361,15 +386,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      walk_0: -8296385383580801948
-      walk_1: 3218353051568008401
-      walk_2: 6971375644381031630
-      walk_3: -3714987382563562326
-      walk_4: -2044624726750869082
-      walk_5: -1800561202758830752
-      walk_6: -7072565547094396234
-      walk_7: -6780060589664581786
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
