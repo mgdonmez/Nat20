@@ -386,7 +386,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Smily_positive_0: -927420019205363986
+      Smily_positive_1: -455987020237792987
+      Smily_positive_2: 5208827931996414059
+      Smily_positive_3: -2825832430919785412
+      Smily_positive_4: 3981617347580767091
+      Smily_positive_5: 6146684392247668294
+      Smily_positive_6: -8862938884826792204
+      Smily_positive_7: 7623575777185479055
+      Smily_positive_8: -2419920010820275306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

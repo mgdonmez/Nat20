@@ -313,7 +313,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -2402,7 +2402,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -2411,7 +2411,97 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      card_slot_0: 7755584624397331746
+      card_slot_1: 3890824085146663692
+      card_slot_10: 7408175878808671404
+      card_slot_11: -2303381093882997916
+      card_slot_12: -2100192203960786034
+      card_slot_13: 2765067268118011772
+      card_slot_14: -410634285835024186
+      card_slot_15: -4345920260633096045
+      card_slot_16: -4646554985839378897
+      card_slot_17: 3136917528501449804
+      card_slot_18: 8328942772712368873
+      card_slot_19: 5434434041255134330
+      card_slot_2: -1077332722115543559
+      card_slot_20: -3357342526853549297
+      card_slot_21: -987887920441904423
+      card_slot_22: 4990203423822591799
+      card_slot_23: 7876034932987098891
+      card_slot_24: -6353600157447900460
+      card_slot_25: 5514619086989726498
+      card_slot_26: 634801332783087841
+      card_slot_27: 5350320192191304570
+      card_slot_28: 7581242106747191499
+      card_slot_29: 3988763905597136554
+      card_slot_3: -3716204179565749580
+      card_slot_30: -8912165942081673335
+      card_slot_31: 2007422098099426978
+      card_slot_32: 8037905577908995482
+      card_slot_33: 617690803233471053
+      card_slot_34: -8050946235922129248
+      card_slot_35: -8967029939628685636
+      card_slot_36: -5163141418873187258
+      card_slot_37: -5747315019928945682
+      card_slot_38: 3391142369044470440
+      card_slot_39: -3688223019932500425
+      card_slot_4: 8433860614049319136
+      card_slot_40: 1126965080813309839
+      card_slot_41: 356088036427381150
+      card_slot_42: -733510329816747442
+      card_slot_43: 3439895802721220658
+      card_slot_44: -6862914085354261396
+      card_slot_45: -6359783935105183190
+      card_slot_46: -1500603341522829822
+      card_slot_47: 7125613622655013415
+      card_slot_48: 3425401826348700581
+      card_slot_49: -8920654600065722454
+      card_slot_5: -6102729426164685465
+      card_slot_50: 6696722055020676696
+      card_slot_51: 2036838487786127404
+      card_slot_52: 3587242201069095742
+      card_slot_53: 719404615818438119
+      card_slot_54: 4593412579062786223
+      card_slot_55: 6525224342972705370
+      card_slot_56: 660626164225487950
+      card_slot_57: 3453136829501778040
+      card_slot_58: 40249836307243709
+      card_slot_59: 1970533585959730143
+      card_slot_6: 2125110317728503088
+      card_slot_60: 1940120099112789959
+      card_slot_61: -2554158799777722291
+      card_slot_62: 3140542258273147147
+      card_slot_63: -484180655259486169
+      card_slot_64: -9041658290772970509
+      card_slot_65: 6831013379916787524
+      card_slot_66: -8523839988623742081
+      card_slot_67: 1892261537124781912
+      card_slot_68: 844534593053428797
+      card_slot_69: 3133720638993358823
+      card_slot_7: -3883409307663516080
+      card_slot_70: -4830477994975861878
+      card_slot_71: -1917948262031236456
+      card_slot_72: -7628483167723542062
+      card_slot_73: -7456574348901615017
+      card_slot_74: -1362112788273598357
+      card_slot_75: -3632844533127944994
+      card_slot_76: -6777749173340818320
+      card_slot_77: -219587519914073513
+      card_slot_78: -526167189705257278
+      card_slot_79: -2153978680865212824
+      card_slot_8: -6096914599770911001
+      card_slot_80: 5075204494049333515
+      card_slot_81: 4018062255522186068
+      card_slot_82: 3759409006776954601
+      card_slot_83: -3042292416727287782
+      card_slot_84: -188356846270434696
+      card_slot_85: -6902055237833585194
+      card_slot_86: -4750586543700370512
+      card_slot_87: -2002577625754978211
+      card_slot_88: -699594289054916785
+      card_slot_89: 4758459203983032641
+      card_slot_9: 5175637507043902908
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
