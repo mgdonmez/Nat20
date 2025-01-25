@@ -54,10 +54,13 @@ public class NewsCard
     [SerializeField] private Genuinity genuinity;
     [SerializeField] private List<DemographicType> affectedPopulation;
     [SerializeField] private float revenue;
+    [SerializeField] private int wisdomSaveDCEffect;
+    [SerializeField] private Sprite sprite;
 
     public Genuinity Genuinity { get => genuinity; set => genuinity = value; }
     public List<DemographicType> AffectedPopulation { get => affectedPopulation; }
     public float Revenue { get => revenue; }
+    public int WisdomSaveDCEffect { get => wisdomSaveDCEffect; }
 
     public NewsCard(Genuinity genuinity = Genuinity.Lie, List<DemographicType> affectedPopulation = null)
     {
@@ -70,6 +73,10 @@ public class NewsCard
         }
 
         this.revenue = 1f / Mathf.Pow(2, (int)genuinity);
+
+        this.wisdomSaveDCEffect = genuinity == Genuinity.Truth ? -1 : 2 - (int)genuinity;
+
+        this.sprite = SpriteManager.Instance.GetNewsCardSprite(genuinity, this.affectedPopulation);
     }
 
     public int DeceptionCheck()
@@ -81,8 +88,6 @@ public class NewsCard
 
 public class Manager : MonoBehaviour
 {
-    private DemographicType[] dtypeValues = (DemographicType[])Enum.GetValues(typeof(DemographicType));
-
     [SerializeField] private int cardTraySize;
     [SerializeField] private int rerollCost;
     [SerializeField] private float budget;
@@ -90,6 +95,8 @@ public class Manager : MonoBehaviour
     [SerializeField] private List<NewsCard> cardTray;
 
     public static Manager Instance;
+    public static DemographicType[] DemographicTypeValues = (DemographicType[])Enum.GetValues(typeof(DemographicType));
+    public static Genuinity[] GenuinityValues = (Genuinity[])Enum.GetValues(typeof(Genuinity));
 
     public List<Demographic> Population { get => population; }
     public List<NewsCard> CardTray { get => cardTray; }
@@ -110,12 +117,12 @@ public class Manager : MonoBehaviour
     }
 
 
-    void Start()
+    private void Start()
     {
         this.population = new List<Demographic>();
-        foreach (DemographicType dt in dtypeValues)
+        foreach (DemographicType dt in DemographicTypeValues)
         {
-            Population.Add(new Demographic(dt, 1.0f / dtypeValues.Length));
+            Population.Add(new Demographic(dt, 1.0f / DemographicTypeValues.Length));
         }
 
         RerollCardTray(true);
@@ -123,9 +130,26 @@ public class Manager : MonoBehaviour
         // FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f);
     }
 
-    void Update()
+    private void Update()
     {
 
+    }
+
+    public NewsCard RandomNewsCard()
+    {
+        Genuinity genuinity = (Genuinity)UnityEngine.Random.Range(0, Enum.GetValues(typeof(Genuinity)).Length);
+
+        int[] affectedPopulationInt = Enumerable.Range(0, DemographicTypeValues.Length)
+        .OrderBy(_ => UnityEngine.Random.value)
+            .Take(UnityEngine.Random.Range(1, DemographicTypeValues.Length + 1))
+            .ToArray();
+
+        List<DemographicType> affectedPopulation = affectedPopulationInt
+            .Select(x => (DemographicType)x)
+            .ToList();
+        affectedPopulation.Sort((a, b) => b.CompareTo(a));
+
+        return new NewsCard(genuinity, affectedPopulation);
     }
 
     public void RerollCardTray(bool firstTime = false)
@@ -147,16 +171,17 @@ public class Manager : MonoBehaviour
             {
                 Genuinity genuinity = (Genuinity)UnityEngine.Random.Range(0, Enum.GetValues(typeof(Genuinity)).Length);
 
-                int[] affectedPopulationInt = Enumerable.Range(0, dtypeValues.Length)
+                int[] affectedPopulationInt = Enumerable.Range(0, DemographicTypeValues.Length)
                 .OrderBy(_ => UnityEngine.Random.value)
-                    .Take(UnityEngine.Random.Range(1, dtypeValues.Length + 1))
+                    .Take(UnityEngine.Random.Range(1, DemographicTypeValues.Length + 1))
                     .ToArray();
 
                 List<DemographicType> affectedPopulation = affectedPopulationInt
                     .Select(x => (DemographicType)x)
                     .ToList();
+                affectedPopulation.Sort((a, b) => b.CompareTo(a));
 
-                this.cardTray.Add(new NewsCard(genuinity, affectedPopulation));
+                this.cardTray.Add(RandomNewsCard());
             }
         }
     }
@@ -164,10 +189,10 @@ public class Manager : MonoBehaviour
     public void UpdatePopulationRatios()
     {
         float remainingMaxRatio = 0.8f;
-        foreach (DemographicType dt in dtypeValues)
+        foreach (DemographicType dt in DemographicTypeValues)
         {
             Demographic demographic = this.population[(int)dt];
-            if (dt != dtypeValues[dtypeValues.Length - 1])
+            if (dt != DemographicTypeValues[DemographicTypeValues.Length - 1])
             {
                 float ratio = UnityEngine.Random.Range(0.1f, remainingMaxRatio);
                 demographic.Ratio = ratio;
