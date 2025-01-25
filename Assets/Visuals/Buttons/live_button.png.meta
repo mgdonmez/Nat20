@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 68a0f768221734342b6a5ccd4ccc0c1a
+guid: 6c2a996d665bc4141912c281444ab188
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3338749442709606003
-    second: Coin_0
+      213: 8357492829333517431
+    second: live_button_0
   - first:
-      213: 5848064539680731454
-    second: Coin_1
+      213: 1541941167458888805
+    second: live_button_1
   - first:
-      213: -2652133911391862278
-    second: Coin_2
-  - first:
-      213: 5522397121026081838
-    second: Coin_3
+      213: 2458647695661589823
+    second: live_button_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -161,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coin_0
+      name: live_button_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 21
-        width: 162
-        height: 162
+        x: 6
+        y: 5
+        width: 392
+        height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d81b24142116aa1d0800000000000000
-      internalID: -3338749442709606003
+      spriteID: 7747c49c277cbf370800000000000000
+      internalID: 8357492829333517431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_1
+      name: live_button_1
       rect:
         serializedVersion: 2
-        x: 255
-        y: 21
-        width: 102
-        height: 162
+        x: 410
+        y: 6
+        width: 392
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e317a37e6bf782150800000000000000
-      internalID: 5848064539680731454
+      spriteID: 56c20fe7253166510800000000000000
+      internalID: 1541941167458888805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_2
+      name: live_button_2
       rect:
         serializedVersion: 2
-        x: 496
-        y: 22
-        width: 27
-        height: 162
+        x: 814
+        y: 6
+        width: 392
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,30 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af188ba524ab13bd0800000000000000
-      internalID: -2652133911391862278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coin_3
-      rect:
-        serializedVersion: 2
-        x: 663
-        y: 21
-        width: 102
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e2446633cee73ac40800000000000000
-      internalID: 5522397121026081838
+      spriteID: f35edbf7d0fde1220800000000000000
+      internalID: 2458647695661589823
       vertices: []
       indices: 
       edges: []
