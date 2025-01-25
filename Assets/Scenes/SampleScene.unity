@@ -202,9 +202,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1623406696}
     m_Modifications:
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: hasCard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: isCardIn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
-      value: Card_slot (4)
+      value: News Card 1
       objectReference: {fileID: 0}
     - target: {fileID: 8851812683701729152, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_SortingOrder
@@ -275,9 +283,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1623406696}
     m_Modifications:
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: hasCard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: isCardIn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
-      value: Card_slot (5)
+      value: News Card 2
       objectReference: {fileID: 0}
     - target: {fileID: 8851812683701729152, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_SortingOrder
@@ -712,7 +728,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
-      value: Card_slot (1)
+      value: News Section 1
       objectReference: {fileID: 0}
     - target: {fileID: 8851812683701729152, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_SortingOrder
@@ -872,6 +888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbaad0a9ec2a6d641a508736db857922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInSlot: 0
+  usedSlot: {fileID: 0}
 --- !u!114 &576147176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,38 +1012,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &655356021 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3536436894953920232, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-  m_PrefabInstance: {fileID: 1007607495}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &655356026
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655356021}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &675004689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,9 +1174,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1623406696}
     m_Modifications:
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: hasCard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: isCardIn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
-      value: Card_slot (8)
+      value: News Card 5
       objectReference: {fileID: 0}
     - target: {fileID: 8851812683701729152, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_SortingOrder
@@ -1433,74 +1427,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975938770}
   m_CullTransparentMesh: 1
---- !u!1001 &1007607495
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471736601076757832, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3536436894953920232, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_Name
-      value: Card
-      objectReference: {fileID: 0}
-    - target: {fileID: 3536436894953920232, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346554853997184255, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3536436894953920232, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 655356026}
-  m_SourcePrefab: {fileID: 100100000, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
 --- !u!1 &1013544322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1567,19 @@ MonoBehaviour:
   budget: 5
   population: []
   cardTray: []
+  newsSections: []
+  cardTraySlots:
+  - {fileID: 409786630}
+  - {fileID: 1531691583}
+  - {fileID: 2052033854}
+  - {fileID: 1558177677}
+  - {fileID: 1766147111}
+  - {fileID: 1103895856}
+  newsSectionsSlots:
+  - {fileID: 1098857645}
+  - {fileID: 1138748752}
+  - {fileID: 2030335284}
+  cardPrefab: {fileID: 3536436894953920232, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
 --- !u!114 &1163793300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1778,9 +1717,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1623406696}
     m_Modifications:
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: hasCard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: isCardIn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
-      value: Card_slot (3)
+      value: News Card 0
       objectReference: {fileID: 0}
     - target: {fileID: 8851812683701729152, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_SortingOrder
@@ -1930,9 +1877,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1623406696}
     m_Modifications:
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: hasCard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: isCardIn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
-      value: Card_slot (6)
+      value: News Card 3
       objectReference: {fileID: 0}
     - target: {fileID: 8851812683701729152, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_SortingOrder
@@ -2280,6 +2235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbaad0a9ec2a6d641a508736db857922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInSlot: 0
+  usedSlot: {fileID: 0}
 --- !u!1 &1515873439
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,7 +2435,7 @@ GameObject:
   - component: {fileID: 1623406696}
   - component: {fileID: 1623406697}
   m_Layer: 0
-  m_Name: CardTray
+  m_Name: News Card Tray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2568,9 +2525,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1623406696}
     m_Modifications:
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: hasCard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775187531151926096, guid: df8c6a53ed829924988521810eedb814, type: 3}
+      propertyPath: isCardIn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
-      value: Card_slot (7)
+      value: News Card 4
       objectReference: {fileID: 0}
     - target: {fileID: 8851812683701729152, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_SortingOrder
@@ -2644,7 +2609,7 @@ GameObject:
   - component: {fileID: 1676369922}
   - component: {fileID: 1676369923}
   m_Layer: 0
-  m_Name: TV_0
+  m_Name: News Determiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2813,7 +2778,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
-      value: Card_slot (2)
+      value: News Section 2
       objectReference: {fileID: 0}
     - target: {fileID: 8920218391213202228, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2870,7 +2835,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
-      value: Card_slot
+      value: News Section 0
       objectReference: {fileID: 0}
     - target: {fileID: 8920218391213202228, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3213,8 +3178,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1676369922}
   - {fileID: 1623406696}
+  - {fileID: 1676369922}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2030335284 stripped
@@ -3231,10 +3196,9 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1163793298}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1619636688}
   - {fileID: 1287951457}
   - {fileID: 1982705476}
-  - {fileID: 1163793298}
-  - {fileID: 1007607495}

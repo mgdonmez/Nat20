@@ -9,6 +9,9 @@ public class Draggable : MonoBehaviour
     private Vector3 startingScale;
     private Vector3 hoverScale;
 
+    public bool isInSlot = false;
+    public GameObject usedSlot;
+
     public bool IsDragged()
     {
         return isDragged;
