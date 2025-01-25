@@ -1601,6 +1601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163793298}
   - component: {fileID: 1163793299}
+  - component: {fileID: 1163793300}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1640,6 +1641,18 @@ MonoBehaviour:
   budget: 5
   population: []
   cardTray: []
+--- !u!114 &1163793300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163793297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc67b72011d9db43bba626ca13a6251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1187120616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,22 +2814,6 @@ PrefabInstance:
     - target: {fileID: 7688743365958089191, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_Name
       value: Card_slot (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8851812683701729152, guid: df8c6a53ed829924988521810eedb814, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8920218391213202228, guid: df8c6a53ed829924988521810eedb814, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.23333333
-      objectReference: {fileID: 0}
-    - target: {fileID: 8920218391213202228, guid: df8c6a53ed829924988521810eedb814, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.23333333
-      objectReference: {fileID: 0}
-    - target: {fileID: 8920218391213202228, guid: df8c6a53ed829924988521810eedb814, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.23333333
       objectReference: {fileID: 0}
     - target: {fileID: 8920218391213202228, guid: df8c6a53ed829924988521810eedb814, type: 3}
       propertyPath: m_LocalPosition.x
