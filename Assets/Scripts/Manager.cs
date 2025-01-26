@@ -64,6 +64,9 @@ public class Manager : MonoBehaviour
     [SerializeField] private Button rerollButton;
     [SerializeField] private GameObject coins;
     [SerializeField] private GameObject cardPrefab;
+    private float newsGingleLength = 6.25f;
+    private float greetingLength = 2.55f;
+    private float newsSpeechLength = 5.05f;
 
     public static Manager Instance;
     public static DemographicType[] DemographicTypeValues = (DemographicType[])Enum.GetValues(typeof(DemographicType));
@@ -199,9 +202,9 @@ public class Manager : MonoBehaviour
         this.liveButton.GetComponent<Image>().sprite = this.liveButtonLive;
         this.rerollButton.interactable = false;
         DetermineNewsEffect();
-        FunctionTimer.Create(() => UpdateBudget(), 9.1f);
-        FunctionTimer.Create(() => UpdatePopulationRatios(), 9.2f);
-        FunctionTimer.Create(() => RenewDay(), 9.3f);
+        FunctionTimer.Create(() => UpdateBudget(), 9.1f + newsGingleLength + greetingLength);
+        FunctionTimer.Create(() => UpdatePopulationRatios(), 9.2f + newsGingleLength + greetingLength);
+        FunctionTimer.Create(() => RenewDay(), 9.3f + newsGingleLength + greetingLength);
     }
 
     public void DetermineNewsEffect()
@@ -238,7 +241,7 @@ public class Manager : MonoBehaviour
                 {
                     this.newsSectionsProfitability[index] = false;
                 }
-            }, i * 3.0f);
+            }, i * newsSpeechLength + newsGingleLength + greetingLength);
         }
     }
 
