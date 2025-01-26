@@ -4,10 +4,11 @@ using UnityEngine;
 public class StopDice : StateMachineBehaviour
 {
     [SerializeField] private List<Sprite> dice;
+    public int roll;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.GetComponent<SpriteRenderer>().sprite = dice[5];
+        animator.gameObject.GetComponent<SpriteRenderer>().sprite = dice[roll - 1];
         animator.enabled = false;
     }
 

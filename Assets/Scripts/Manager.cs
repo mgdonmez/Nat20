@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UIElements.Experimental;
+using System.Reflection;
+using UnityEngine.UI;
 
 public enum DemographicType
 {
@@ -52,6 +54,14 @@ public class Manager : MonoBehaviour
     [SerializeField] private List<GameObject> newsSections;
     [SerializeField] private List<Transform> cardTraySlots;
     [SerializeField] private List<Transform> newsSectionsSlots;
+    [SerializeField] private Animator roll;
+    [SerializeField] private StopDice stopDice;
+    [SerializeField] private GameObject die;
+    [SerializeField] private GameObject liveButton;
+    [SerializeField] private Sprite liveButtonLive;
+    [SerializeField] private Sprite liveButtonFree;
+    [SerializeField] private bool isLive;
+    [SerializeField] private Button rerollButton;
     [SerializeField] private GameObject cardPrefab;
 
     public static Manager Instance;
@@ -94,8 +104,15 @@ public class Manager : MonoBehaviour
 
         this.newsSectionsProfitability = new List<bool> { false, false, false };
 
-        //FunctionTimer.Create(() => { RerollCardTray(); }, 10f);
-        //FunctionTimer.Create(() => { BroadCastTheNews(); }, 20f);
+        this.stopDice = this.roll.GetBehaviour<StopDice>();
+    }
+
+    private void Update()
+    {
+        if (!this.isLive)
+        {
+            this.rerollButton.interactable = this.budget >= this.rerollCost;
+        }
     }
 
     public GameObject RandomNewsCard()
@@ -141,7 +158,7 @@ public class Manager : MonoBehaviour
 
     public void RerollCardTray(bool firstTime = false)
     {
-        if (firstTime || budget > rerollCost)
+        if (firstTime || budget >= rerollCost)
         {
 
             if (firstTime)
@@ -153,7 +170,7 @@ public class Manager : MonoBehaviour
                 budget -= rerollCost;
                 foreach (GameObject card in this.cardTray)
                 {
-                    if(card != null)
+                    if (card != null)
                     {
                         Destroy(card);
                     }
@@ -170,42 +187,50 @@ public class Manager : MonoBehaviour
 
     public void BroadCastTheNews()
     {
+        this.isLive = true;
+        this.liveButton.GetComponent<Button>().interactable = false;
+        this.liveButton.GetComponent<Image>().sprite = this.liveButtonLive;
+        this.rerollButton.interactable = false;
         DetermineNewsEffect();
-        UpdateBudget();
-        UpdatePopulationRatios();
-        RenewDay();
+        FunctionTimer.Create(() => UpdateBudget(), 9.1f);
+        FunctionTimer.Create(() => UpdatePopulationRatios(), 9.2f);
+        FunctionTimer.Create(() => RenewDay(), 9.3f);
     }
 
     public void DetermineNewsEffect()
     {
         for (int i = 0; i < 3; i++)
         {
-            if (this.newsSections[i] != null)
+            int index = i;
+            FunctionTimer.Create(() =>
             {
-                NewsCard newsSectionCard = this.newsSections[i].GetComponent<CardBehaviour>().CardInfo;
-                foreach (DemographicType dt in newsSectionCard.AffectedPopulation)
+                if (this.newsSections[index] != null)
                 {
-                    Demographic affectedDemographic = this.population[(int)dt];
-                    if (newsSectionCard.Genuinity == Genuinity.Truth)
+                    NewsCard newsSectionCard = this.newsSections[index].GetComponent<CardBehaviour>().CardInfo;
+                    foreach (DemographicType dt in newsSectionCard.AffectedPopulation)
                     {
-                        this.newsSectionsProfitability[i] = true;
-                        affectedDemographic.ViewerRatio *= 1.2f;
+                        Demographic affectedDemographic = this.population[(int)dt];
+                        if (newsSectionCard.Genuinity == Genuinity.Truth)
+                        {
+                            this.newsSectionsProfitability[index] = true;
+                            affectedDemographic.ViewerRatio *= 1.2f;
+                        }
+                        else
+                        {
+                            int deceptionCheck = newsSectionCard.DeceptionCheck(this.die, this.stopDice);
+                            bool profitability = true;
+                            bool deceptionSuccess = deceptionCheck >= affectedDemographic.WisdomSaveDC();
+                            profitability &= deceptionSuccess;
+                            affectedDemographic.ViewerRatio *= deceptionSuccess ? 1.3f : 0.5f;
+                        }
+                        affectedDemographic.WisdomSaveDCBonus += newsSectionCard.WisdomSaveDCEffect;
                     }
-                    else
-                    {
-                        int deceptionCheck = newsSectionCard.DeceptionCheck();
-                        bool profitability = true;
-                        bool deceptionSuccess = deceptionCheck >= affectedDemographic.WisdomSaveDC();
-                        profitability &= deceptionSuccess;
-                        affectedDemographic.ViewerRatio *= deceptionSuccess ? 1.3f : 0.5f;
-                    }
-                    affectedDemographic.WisdomSaveDCBonus += newsSectionCard.WisdomSaveDCEffect;
                 }
-            }
-            else
-            {
-                this.newsSectionsProfitability[i] = false;
-            }
+                else
+                {
+                    this.newsSectionsProfitability[index] = false;
+                }
+            }, i * 3.0f);
         }
     }
 
@@ -215,7 +240,7 @@ public class Manager : MonoBehaviour
         {
             if (newsSectionsProfitability[i])
             {
-                NewsCard newsSectionCard = this.newsSections[i].GetComponent<NewsCard>();
+                NewsCard newsSectionCard = this.newsSections[i].GetComponent<CardBehaviour>().CardInfo;
                 float sectionRevenue = newsSectionCard.Revenue;
                 foreach (DemographicType dt in newsSectionCard.AffectedPopulation)
                 {
@@ -270,5 +295,10 @@ public class Manager : MonoBehaviour
                 newsSectionSlot.HasCard = false;
             }
         }
+
+        this.liveButton.GetComponent<Button>().interactable = true;
+        this.liveButton.GetComponent<Image>().sprite = this.liveButtonFree;
+        this.rerollButton.interactable = true;
+        this.isLive = false;
     }
 }
