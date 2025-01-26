@@ -2836,6 +2836,8 @@ MonoBehaviour:
   rerollButton: {fileID: 1739709037}
   coins: {fileID: 639110254}
   cardPrefab: {fileID: 3536436894953920232, guid: 4a35a0d4840fd0d40b33c83e5df1ae67, type: 3}
+  host: {fileID: 411844361}
+  viewers: {fileID: 1117378006}
 --- !u!114 &1163793300
 MonoBehaviour:
   m_ObjectHideFlags: 0
