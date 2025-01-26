@@ -54,6 +54,7 @@ public class NewsCard
         {
             animator.enabled = true;
             animator.Play("Roll", -1, 0f);
+            die.GetComponent<AudioSource>().Play();
         }
         stopDice.roll = rollResult;
 
