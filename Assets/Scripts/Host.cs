@@ -44,4 +44,15 @@ public class Host :MonoBehaviour
     {
         headAnimator.SetBool("Front", front);
     }
+
+    public void Next()
+    {
+        audioSource.clip = audioClips[3];
+        audioSource.Play();
+    }
+    public void Outro()
+    {
+        audioSource.clip = audioClips[4];
+        audioSource.Play();
+    }
 }
