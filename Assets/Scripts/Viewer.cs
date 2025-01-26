@@ -14,10 +14,27 @@ public class Viewer : MonoBehaviour
     float distance;
     bool isWalking = false;
     Vector3 startPosition;
+    [SerializeField]
+    DemographicType type;
 
     private void Start()
     {
         startPosition = transform.position;
+        if(GetComponentsInChildren<SpriteRenderer>()[1].sprite.name.Contains("circle_head_0"))
+        {
+            type = DemographicType.Circle;
+        }
+        else if(GetComponentsInChildren<SpriteRenderer>()[1].sprite.name.Contains("triangle_head_0"))
+        {
+            type = DemographicType.Triangle;
+        }
+        else if (GetComponentsInChildren<SpriteRenderer>()[1].sprite.name.Contains("square_head_0"))
+        {
+            type = DemographicType.Square;
+        }
+
+        isWalking = true;
+        Walk();
     }
 
     private void Update()
