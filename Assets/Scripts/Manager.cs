@@ -64,9 +64,14 @@ public class Manager : MonoBehaviour
     [SerializeField] private Button rerollButton;
     [SerializeField] private GameObject coins;
     [SerializeField] private GameObject cardPrefab;
-    private float newsGingleLength = 6.25f;
+    [SerializeField] private Host host;
+    [SerializeField] private Transform viewers;
+    private float newsGingleLength = 5.0f;
     private float greetingLength = 2.55f;
     private float newsSpeechLength = 5.05f;
+    private float nextGingleLength = 2.5f;
+    private float newsEndingLength = 3.45f;
+    private float newsEndingJingleLength = 5.00f;
 
     public static Manager Instance;
     public static DemographicType[] DemographicTypeValues = (DemographicType[])Enum.GetValues(typeof(DemographicType));
@@ -201,19 +206,33 @@ public class Manager : MonoBehaviour
         this.liveButton.GetComponent<Button>().interactable = false;
         this.liveButton.GetComponent<Image>().sprite = this.liveButtonLive;
         this.rerollButton.interactable = false;
-        DetermineNewsEffect();
-        FunctionTimer.Create(() => UpdateBudget(), 9.1f + newsGingleLength + greetingLength);
-        FunctionTimer.Create(() => UpdatePopulationRatios(), 9.2f + newsGingleLength + greetingLength);
-        FunctionTimer.Create(() => RenewDay(), 9.3f + newsGingleLength + greetingLength);
+        float timer = newsGingleLength;
+        FunctionTimer.Create(() => this.host.Greeting(), timer);
+        timer += greetingLength;
+        FunctionTimer.Create(() => this.host.Next(), timer);
+        timer += nextGingleLength;
+        DetermineNewsEffect(timer);
+        timer += newsSpeechLength * 3 + nextGingleLength * 3;
+        FunctionTimer.Create(()=>this.host.Ending(), timer);
+        timer += newsEndingLength;
+        FunctionTimer.Create(() => this.host.Outro(), timer);
+        timer += newsEndingJingleLength + 0.1f;
+        FunctionTimer.Create(() => UpdateBudget(), timer);
+        timer += 0.1f;
+        FunctionTimer.Create(() => UpdatePopulationRatios(), timer);
+        timer += 0.1f;
+        FunctionTimer.Create(() => RenewDay(), timer);
     }
 
-    public void DetermineNewsEffect()
+    public void DetermineNewsEffect(float timer)
     {
         for (int i = 0; i < 3; i++)
         {
             int index = i;
             FunctionTimer.Create(() =>
             {
+                this.host.News();
+                FunctionTimer.Create(() => this.host.Next(), newsSpeechLength);
                 if (this.newsSections[index] != null)
                 {
                     NewsCard newsSectionCard = this.newsSections[index].GetComponent<CardBehaviour>().CardInfo;
@@ -241,7 +260,7 @@ public class Manager : MonoBehaviour
                 {
                     this.newsSectionsProfitability[index] = false;
                 }
-            }, i * newsSpeechLength + newsGingleLength + greetingLength);
+            }, i * (newsSpeechLength + nextGingleLength) + timer);
         }
     }
 
