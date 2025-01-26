@@ -1,0 +1,789 @@
+fileFormatVersion: 2
+guid: 74789c979020d334b982f781b9437b07
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6986616227984693196
+    second: d20dice_0
+  - first:
+      213: -1133447516602064498
+    second: d20dice_1
+  - first:
+      213: -6596465824569077511
+    second: d20dice_2
+  - first:
+      213: -2674774137498671338
+    second: d20dice_3
+  - first:
+      213: 4448921994727971605
+    second: d20dice_4
+  - first:
+      213: 1432266239572987730
+    second: d20dice_5
+  - first:
+      213: -1941892416537289169
+    second: d20dice_6
+  - first:
+      213: -8582967610773078368
+    second: d20dice_7
+  - first:
+      213: -7829381862059500904
+    second: d20dice_8
+  - first:
+      213: -3505492580900522281
+    second: d20dice_9
+  - first:
+      213: -5790527609471779405
+    second: d20dice_10
+  - first:
+      213: -3697052061863716413
+    second: d20dice_11
+  - first:
+      213: 317494593209025250
+    second: d20dice_12
+  - first:
+      213: 4390330381868814755
+    second: d20dice_13
+  - first:
+      213: -4340282343025276696
+    second: d20dice_14
+  - first:
+      213: -125194721298909342
+    second: d20dice_15
+  - first:
+      213: 774935820844885083
+    second: d20dice_16
+  - first:
+      213: 8543956790220100453
+    second: d20dice_17
+  - first:
+      213: -3622163363234352888
+    second: d20dice_18
+  - first:
+      213: -44008625992838145
+    second: d20dice_19
+  - first:
+      213: -3010969641509941362
+    second: d20dice_20
+  - first:
+      213: 5079412774718294435
+    second: d20dice_21
+  - first:
+      213: -4617935942360154732
+    second: d20dice_22
+  - first:
+      213: -8146458981990545113
+    second: d20dice_23
+  - first:
+      213: -6577599799955126368
+    second: d20dice_24
+  - first:
+      213: -8555195322578414881
+    second: d20dice_25
+  - first:
+      213: 3192696449059394474
+    second: d20dice_26
+  - first:
+      213: 5495850841702559576
+    second: d20dice_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: d20dice_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1218
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba752505733acdd4e854d84531be5f86
+      internalID: -259522515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1218
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3771541e16c75d4e9ea73c101a986f3
+      internalID: -405791500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1218
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc5ba333f455fd44ac848e388520742
+      internalID: 1485656345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_3
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1218
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8225096368dfc7640b9226912ad24fb7
+      internalID: -1821839764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_4
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1218
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be879a655c4663140a378f3da12c3d62
+      internalID: 1572521216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 914
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a81bf828cf76644386c5d4a48cbbedd
+      internalID: 196134518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_6
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 914
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c8037d236835a4e94da891c5654cba
+      internalID: 783474684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_7
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 914
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2b7735899000442b5a1553a5326ce0
+      internalID: -501359776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_8
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 914
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5468c8b5875823a41ae19948b4a45f29
+      internalID: 647250303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_9
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 914
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25396a5017421846873eeb85c4713de
+      internalID: 207873624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 610
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eea54882a5b65845885e60dc74b1391
+      internalID: 347905607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_11
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 610
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819e8d55bfdbc8e49b7248ce022a4606
+      internalID: 771804262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_12
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 610
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709fe11b4d0f5414a9bf3c4cd0456fb4
+      internalID: -1168180856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_13
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 610
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5490ef84bbf678a498a513b703ef08fe
+      internalID: -73460721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_14
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 610
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c837adbf9adf9c498e73ae1b0941f0b
+      internalID: 1626568485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55156c6fd1b5c34ea944eed8a9119ed
+      internalID: -1562103234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_16
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 306
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c147b9e9bb2cf964c9dd1cb5d1dfacd8
+      internalID: 32838422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_17
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 306
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73874371ec7ffdc49851624014362bd8
+      internalID: 1385792617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_18
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 306
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc3d3dd74ba0e4428c66c2972afcb49
+      internalID: 1021760669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_19
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 306
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd5d6ccaceeb7744a17a6abb1133844
+      internalID: 1552471877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c31372baadf5643b5ab398b870496c
+      internalID: -1633201100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_21
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 2
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d78938d7286c6c4281d538c10180b37
+      internalID: -102978764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_22
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 2
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a5de3ef8a69f946a0d1a3c3eecee5e
+      internalID: -804610748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_23
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 2
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b9d879b0651a04eb1f4b4c4e5ead46
+      internalID: -1583736342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20dice_24
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 2
+        width: 302
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0d7d5596680ae41ada7c52b3f50133
+      internalID: 56331278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f030e901fc638c745917877dcec258a6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      d20dice_0: -259522515
+      d20dice_1: -405791500
+      d20dice_10: 347905607
+      d20dice_11: 771804262
+      d20dice_12: -1168180856
+      d20dice_13: -73460721
+      d20dice_14: 1626568485
+      d20dice_15: -1562103234
+      d20dice_16: 32838422
+      d20dice_17: 1385792617
+      d20dice_18: 1021760669
+      d20dice_19: 1552471877
+      d20dice_2: 1485656345
+      d20dice_20: -1633201100
+      d20dice_21: -102978764
+      d20dice_22: -804610748
+      d20dice_23: -1583736342
+      d20dice_24: 56331278
+      d20dice_3: -1821839764
+      d20dice_4: 1572521216
+      d20dice_5: 196134518
+      d20dice_6: 783474684
+      d20dice_7: -501359776
+      d20dice_8: 647250303
+      d20dice_9: 207873624
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
