@@ -39,17 +39,17 @@ public class Viewer : MonoBehaviour
         Walk();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            isWalking = true;
-            Walk();
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-            isWalking = false;
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.A))
+    //    {
+    //        isWalking = true;
+    //        Walk();
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.D))
+    //        React();
 
-    }
+    //}
     private void Walk()
     {
         if (!isWalking)
@@ -80,7 +80,6 @@ public class Viewer : MonoBehaviour
     }
     private void Stop()
     {
-
         GetComponent<UnityEngine.Animator>().SetBool("Walk", !enabled);
     }
     public void React()
@@ -91,11 +90,18 @@ public class Viewer : MonoBehaviour
         {
             int choice = Random.Range(0, 2);
             GetComponent<AudioSource>().clip = audioClipSources[0+choice];
+            if(isWalking)
+                isWalking = false;
         }
         else
         {
             int choice = Random.Range(0, 2);
             GetComponent<AudioSource>().clip = audioClipSources[3 + choice];
+            if (!isWalking)
+            {
+                isWalking = true;
+                Walk();
+            }
         }
         GetComponent<AudioSource>().Play();
     }
