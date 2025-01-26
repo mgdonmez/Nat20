@@ -234,7 +234,6 @@ public class Manager : MonoBehaviour
             int index = i;
             if (this.newsSections[index] != null)
             {
-                timer += (newsSpeechLength + nextGingleLength);
                 FunctionTimer.Create(() =>
                 {
                     this.host.News();
@@ -267,6 +266,7 @@ public class Manager : MonoBehaviour
                         affectedDemographic.WisdomSaveDCBonus += newsSectionCard.WisdomSaveDCEffect;
                     }
                 }, timer);
+                timer += (newsSpeechLength + nextGingleLength);
             }
             else
             {
