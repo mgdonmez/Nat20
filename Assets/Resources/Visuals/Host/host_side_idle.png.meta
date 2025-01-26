@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: d22010f260eabb8489d0f784fba41ae2
+guid: fea39629c98477d4786e29ed03d33a95
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3451699440861859892
-    second: MainMenu_0
+      213: 88870850257615862
+    second: host_side_idle_0
+  - first:
+      213: -3320260278392566303
+    second: host_side_idle_1
+  - first:
+      213: -5485318537369468240
+    second: host_side_idle_2
+  - first:
+      213: 6056082497480577109
+    second: host_side_idle_3
+  - first:
+      213: -8515748936484327955
+    second: host_side_idle_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainMenu_0
+      name: host_side_idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 59
+        y: 7
+        width: 188
+        height: 289
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ccfa30c75a91910d0800000000000000
-      internalID: -3451699440861859892
+      spriteID: 6fbfd74419bbb3100800000000000000
+      internalID: 88870850257615862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_side_idle_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 7
+        width: 188
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed42984ed01ce1d0800000000000000
+      internalID: -3320260278392566303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_side_idle_2
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 7
+        width: 188
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b24a3c4adb30e3b0800000000000000
+      internalID: -5485318537369468240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_side_idle_3
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 7
+        width: 188
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5505ac8e1f68b0450800000000000000
+      internalID: 6056082497480577109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_side_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 7
+        width: 188
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dede07ce57bf1d980800000000000000
+      internalID: -8515748936484327955
       vertices: []
       indices: 
       edges: []
@@ -147,8 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      MainMenu_0: -3451699440861859892
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

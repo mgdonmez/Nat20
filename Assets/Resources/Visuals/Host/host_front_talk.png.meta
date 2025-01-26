@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: d22010f260eabb8489d0f784fba41ae2
+guid: 2d4022273f43d49428a3c6ac29303dff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3451699440861859892
-    second: MainMenu_0
+      213: -3398453154408479853
+    second: host_front_talk_0
+  - first:
+      213: -6660603034956458766
+    second: host_front_talk_1
+  - first:
+      213: 9193932191910894026
+    second: host_front_talk_2
+  - first:
+      213: 2054589591812680811
+    second: host_front_talk_3
+  - first:
+      213: 8466790694884437739
+    second: host_front_talk_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainMenu_0
+      name: host_front_talk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 18
+        y: 8
+        width: 268
+        height: 290
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ccfa30c75a91910d0800000000000000
-      internalID: -3451699440861859892
+      spriteID: 3934da1acd446d0d0800000000000000
+      internalID: -3398453154408479853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_front_talk_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 8
+        width: 268
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4188f34d8c093a0800000000000000
+      internalID: -6660603034956458766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_front_talk_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 8
+        width: 268
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac990e3fd98679f70800000000000000
+      internalID: 9193932191910894026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_front_talk_3
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 8
+        width: 268
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ca53b195e538c10800000000000000
+      internalID: 2054589591812680811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_front_talk_4
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 8
+        width: 268
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee6b2c2745108570800000000000000
+      internalID: 8466790694884437739
       vertices: []
       indices: 
       edges: []
@@ -147,8 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      MainMenu_0: -3451699440861859892
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
