@@ -32,6 +32,7 @@ public class Draggable : MonoBehaviour
     private void OnMouseDown()
     {
         isDragged = true;
+        gameObject.GetComponent<SpriteRenderer>().sortingOrder += 1;
         transform.DOScale(hoverScale, 0.3f);
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
         spriteDragStartPosition = transform.localPosition;
@@ -49,5 +50,6 @@ public class Draggable : MonoBehaviour
     {
         transform.DOScale(startingScale, 0.3f);
         isDragged = false;
+        gameObject.GetComponent <SpriteRenderer>().sortingOrder -= 1;
     }
 }
