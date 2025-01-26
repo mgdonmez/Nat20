@@ -128,10 +128,10 @@ TextureImporter:
       name: host_side_idle_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 7
-        width: 188
-        height: 289
+        x: 0
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: host_side_idle_1
       rect:
         serializedVersion: 2
-        x: 363
-        y: 7
-        width: 188
-        height: 289
+        x: 304
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +172,10 @@ TextureImporter:
       name: host_side_idle_2
       rect:
         serializedVersion: 2
-        x: 667
-        y: 7
-        width: 188
-        height: 289
+        x: 608
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: host_side_idle_3
       rect:
         serializedVersion: 2
-        x: 971
-        y: 7
-        width: 188
-        height: 289
+        x: 912
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: host_side_idle_4
       rect:
         serializedVersion: 2
-        x: 1275
-        y: 7
-        width: 188
-        height: 289
+        x: 1216
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ee062189d41f5dd40a5ebc400e6561c4
     internalID: 0
     vertices: []
     indices: 
@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      host_side_idle_0: 88870850257615862
+      host_side_idle_1: -3320260278392566303
+      host_side_idle_2: -5485318537369468240
+      host_side_idle_3: 6056082497480577109
+      host_side_idle_4: -8515748936484327955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

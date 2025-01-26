@@ -128,10 +128,10 @@ TextureImporter:
       name: host_front_talk_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 8
-        width: 268
-        height: 290
+        x: 0
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: host_front_talk_1
       rect:
         serializedVersion: 2
-        x: 322
-        y: 8
-        width: 268
-        height: 290
+        x: 304
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +172,10 @@ TextureImporter:
       name: host_front_talk_2
       rect:
         serializedVersion: 2
-        x: 626
-        y: 8
-        width: 268
-        height: 290
+        x: 608
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: host_front_talk_3
       rect:
         serializedVersion: 2
-        x: 930
-        y: 8
-        width: 268
-        height: 290
+        x: 912
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: host_front_talk_4
       rect:
         serializedVersion: 2
-        x: 1234
-        y: 8
-        width: 268
-        height: 290
+        x: 1216
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9518ca693c8346441ba7981358e5916e
     internalID: 0
     vertices: []
     indices: 
@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      host_front_talk_0: -3398453154408479853
+      host_front_talk_1: -6660603034956458766
+      host_front_talk_2: 9193932191910894026
+      host_front_talk_3: 2054589591812680811
+      host_front_talk_4: 8466790694884437739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

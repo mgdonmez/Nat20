@@ -8,6 +8,12 @@ public class Host :MonoBehaviour
 
     private AudioSource audioSource;
 
+    [SerializeField]
+    private Animator headAnimator;
+    [SerializeField]
+    private Animator bodyAnimator;
+
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -28,4 +34,14 @@ public class Host :MonoBehaviour
         audioSource.Play();
     }
 
+    public void SetTalkingAnim(bool enabled)
+    {
+        headAnimator.SetBool("Talking", enabled);
+        bodyAnimator.SetBool("Talking", enabled);
+    }
+
+    public void SetFrontAnim(bool front)
+    {
+        headAnimator.SetBool("Front", front);
+    }
 }
