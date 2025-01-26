@@ -11,6 +11,8 @@ public class Droppable : MonoBehaviour
     [SerializeField] private bool hasCard;
     [SerializeField] private GameObject heldCard;
 
+    public bool IsCardIn { get => isCardIn; set => isCardIn = value; }
+    public bool HasCard { get => hasCard; set => hasCard = value; }
     public GameObject HeldCard { get => heldCard; set => heldCard = value; }
 
     private void Awake()
