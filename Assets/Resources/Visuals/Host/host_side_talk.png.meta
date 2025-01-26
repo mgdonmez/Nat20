@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 277481e61e6cdcf4fb361ca9b614a820
+guid: 6fd509b1ea5827842b9cfe6f7b850e08
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 325440641546151924
-    second: Credits_0
+      213: -8442094424924300340
+    second: host_side_talk_0
+  - first:
+      213: -8610974055293007860
+    second: host_side_talk_1
+  - first:
+      213: 8706652190580369737
+    second: host_side_talk_2
+  - first:
+      213: 609237916556197195
+    second: host_side_talk_3
+  - first:
+      213: -5468790464275590076
+    second: host_side_talk_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Credits_0
+      name: host_side_talk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 59
+        y: 7
+        width: 188
+        height: 289
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f765da0a82348400800000000000000
-      internalID: 325440641546151924
+      spriteID: ccbd41249d7a7da80800000000000000
+      internalID: -8442094424924300340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_side_talk_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 7
+        width: 188
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08c72838bcaf7880800000000000000
+      internalID: -8610974055293007860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_side_talk_2
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 7
+        width: 188
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9496b6a990e34d870800000000000000
+      internalID: 8706652190580369737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_side_talk_3
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 7
+        width: 188
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4df70048a2747800800000000000000
+      internalID: 609237916556197195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: host_side_talk_4
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 7
+        width: 188
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4445fc13c04fa14b0800000000000000
+      internalID: -5468790464275590076
       vertices: []
       indices: 
       edges: []
@@ -147,8 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Credits_0: 325440641546151924
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
