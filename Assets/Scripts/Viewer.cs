@@ -72,7 +72,7 @@ public class Viewer : MonoBehaviour
             Vector3 rot = new Vector3(0f, 0f, 0f);
             transform.DOLocalRotate(rot, 1f);
         }
-        GetComponent<Animator>().SetBool("Walk", enabled);
+        GetComponent<UnityEngine.Animator>().SetBool("Walk", enabled);
 
         transform.DOMove(destination, duration).OnComplete(() => { if (isWalking) Walk(); else Stop(); });
     }
@@ -80,7 +80,7 @@ public class Viewer : MonoBehaviour
     {
         //transform.DOMove(new Vector3(transform.position.x, -2.5f, transform.position.z), 2f);
         //transform.DOScale(0.9f, 3f).OnComplete(() => { if (!isWalking) Walk(); else Stop(); });
-        GetComponent<Animator>().SetBool("Walk", !enabled);
+        GetComponent<UnityEngine.Animator>().SetBool("Walk", !enabled);
     }
     private void Watch()
     {

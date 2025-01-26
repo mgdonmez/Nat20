@@ -45,9 +45,19 @@ public class NewsCard
         this.sprite = SpriteManager.Instance.GetNewsCardSprite(genuinity, this.affectedPopulation);
     }
 
-    public int DeceptionCheck()
+    public int DeceptionCheck(GameObject die, StopDice stopDice)
     {
-        return UnityEngine.Random.Range(1, 21) + this.deceptionPenalty;
+        int rollResult = UnityEngine.Random.Range(1, 21);
+
+        Animator animator = die.GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.enabled = true;
+            animator.Play("Roll", -1, 0f);
+        }
+        stopDice.roll = rollResult;
+
+        return rollResult + this.deceptionPenalty;
     }
 }
 
