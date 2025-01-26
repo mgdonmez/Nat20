@@ -54,13 +54,16 @@ public class NewsCard
     [SerializeField] private Genuinity genuinity;
     [SerializeField] private List<DemographicType> affectedPopulation;
     [SerializeField] private float revenue;
+    [SerializeField] private int deceptionPenalty;
     [SerializeField] private int wisdomSaveDCEffect;
     [SerializeField] private Sprite sprite;
 
     public Genuinity Genuinity { get => genuinity; set => genuinity = value; }
     public List<DemographicType> AffectedPopulation { get => affectedPopulation; }
     public float Revenue { get => revenue; }
+    public int DeceptionPenalty { get => deceptionPenalty; }
     public int WisdomSaveDCEffect { get => wisdomSaveDCEffect; }
+    public Sprite Sprite { get => sprite; }
 
     public NewsCard(Genuinity genuinity = Genuinity.Lie, List<DemographicType> affectedPopulation = null)
     {
@@ -74,6 +77,8 @@ public class NewsCard
 
         this.revenue = 1f / Mathf.Pow(2, (int)genuinity);
 
+        this.deceptionPenalty = (2 - (int)genuinity) * -3;
+
         this.wisdomSaveDCEffect = genuinity == Genuinity.Truth ? -1 : 2 - (int)genuinity;
 
         this.sprite = SpriteManager.Instance.GetNewsCardSprite(genuinity, this.affectedPopulation);
@@ -81,10 +86,9 @@ public class NewsCard
 
     public int DeceptionCheck()
     {
-        return UnityEngine.Random.Range(1, 21) + (2 - (int)genuinity) * -3;
+        return UnityEngine.Random.Range(1, 21) + this.deceptionPenalty;
     }
 }
-
 
 public class Manager : MonoBehaviour
 {
@@ -92,14 +96,21 @@ public class Manager : MonoBehaviour
     [SerializeField] private int rerollCost;
     [SerializeField] private float budget;
     [SerializeField] private List<Demographic> population;
-    [SerializeField] private List<NewsCard> cardTray;
+    [SerializeField] private List<GameObject> cardTray;
+    [SerializeField] private List<GameObject> newsSections;
+    [SerializeField] private List<Transform> cardTraySlots;
+    [SerializeField] private List<Transform> newsSectionsSlots;
+    [SerializeField] private GameObject cardPrefab;
 
     public static Manager Instance;
     public static DemographicType[] DemographicTypeValues = (DemographicType[])Enum.GetValues(typeof(DemographicType));
     public static Genuinity[] GenuinityValues = (Genuinity[])Enum.GetValues(typeof(Genuinity));
 
     public List<Demographic> Population { get => population; }
-    public List<NewsCard> CardTray { get => cardTray; }
+    public List<GameObject> CardTray { get => cardTray; }
+    public List<GameObject> NewsSections { get => newsSections; }
+    public List<Transform> CardTraySlots { get => cardTraySlots; }
+    public List<Transform> NewsSectionsSlots { get => newsSectionsSlots; }
     public float Budget { get => budget; set => budget = value; }
 
     private void Awake()
@@ -126,8 +137,8 @@ public class Manager : MonoBehaviour
         }
 
         RerollCardTray(true);
-        // FunctionTimer.Create(() => { RerollCardTray(); FunctionTimer.Create(() => { RerollCardTray(); }, 10.0f); }, 10.0f);
-        // FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); FunctionTimer.Create(() => { UpdatePopulationRatios(); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f); }, 2.0f);
+
+        this.newsSections = new List<GameObject>() { null, null, null };
     }
 
     private void Update()
@@ -135,7 +146,7 @@ public class Manager : MonoBehaviour
 
     }
 
-    public NewsCard RandomNewsCard()
+    public GameObject RandomNewsCard()
     {
         Genuinity genuinity = (Genuinity)UnityEngine.Random.Range(0, Enum.GetValues(typeof(Genuinity)).Length);
 
@@ -149,7 +160,11 @@ public class Manager : MonoBehaviour
             .ToList();
         affectedPopulation.Sort((a, b) => b.CompareTo(a));
 
-        return new NewsCard(genuinity, affectedPopulation);
+        GameObject newsCardObject = Instantiate(cardPrefab);
+        newsCardObject.name = "News Card";
+        newsCardObject.GetComponent<CardBehaviour>().CardInfo = new NewsCard(genuinity, affectedPopulation);
+
+        return newsCardObject;
     }
 
     public void RerollCardTray(bool firstTime = false)
@@ -159,7 +174,7 @@ public class Manager : MonoBehaviour
 
             if (firstTime)
             {
-                this.cardTray = new List<NewsCard>();
+                this.cardTray = new List<GameObject>();
             }
             else
             {
@@ -180,8 +195,12 @@ public class Manager : MonoBehaviour
                     .Select(x => (DemographicType)x)
                     .ToList();
                 affectedPopulation.Sort((a, b) => b.CompareTo(a));
+                GameObject newsCardObject = RandomNewsCard();
+                newsCardObject.transform.position = this.cardTraySlots[i].transform.position;
+                newsCardObject.GetComponent<Draggable>().isInSlot = true;
+                this.cardTraySlots[i].GetComponent<Droppable>().HeldCard = newsCardObject;
 
-                this.cardTray.Add(RandomNewsCard());
+                this.cardTray.Add(newsCardObject);
             }
         }
     }
