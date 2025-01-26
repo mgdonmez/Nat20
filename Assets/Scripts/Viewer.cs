@@ -12,10 +12,12 @@ public class Viewer : MonoBehaviour
     Vector3 destination;
     [SerializeField]
     float distance;
-    bool isWalking = false;
+    public bool isWalking = false;
     Vector3 startPosition;
     [SerializeField]
     DemographicType type;
+    [SerializeField]
+    private AudioClip[] audioClipSources;
 
     private void Start()
     {
@@ -78,12 +80,29 @@ public class Viewer : MonoBehaviour
     }
     private void Stop()
     {
-        //transform.DOMove(new Vector3(transform.position.x, -2.5f, transform.position.z), 2f);
-        //transform.DOScale(0.9f, 3f).OnComplete(() => { if (!isWalking) Walk(); else Stop(); });
+
         GetComponent<UnityEngine.Animator>().SetBool("Walk", !enabled);
     }
-    private void Watch()
+    public void React()
     {
+        bool approved = Manager.Instance.Population[(int)type].ViewerRatio > Random.Range(0f, 1f);
 
+        if (approved)
+        {
+            int choice = Random.Range(0, 2);
+            GetComponent<AudioSource>().clip = audioClipSources[0+choice];
+        }
+        else
+        {
+            int choice = Random.Range(0, 2);
+            GetComponent<AudioSource>().clip = audioClipSources[3 + choice];
+        }
+        GetComponent<AudioSource>().Play();
+    }
+    public void Interest()
+    {
+        int choice = Random.Range(0, 3);
+        GetComponent<AudioSource>().clip = audioClipSources[6 + choice];
+        GetComponent<AudioSource>().Play();
     }
 }
