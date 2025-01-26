@@ -155,10 +155,10 @@ TextureImporter:
       name: host_side_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 7
-        width: 188
-        height: 289
+        x: 0
+        y: 0
+        width: 304
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 44d4c8448668d704680ff070f4f247f6
     internalID: 0
     vertices: []
     indices: 

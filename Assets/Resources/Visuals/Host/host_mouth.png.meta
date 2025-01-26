@@ -167,10 +167,10 @@ TextureImporter:
       name: host_mouth_0
       rect:
         serializedVersion: 2
-        x: 115
-        y: 110
-        width: 75
-        height: 11
+        x: 0
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: host_mouth_1
       rect:
         serializedVersion: 2
-        x: 420
-        y: 102
-        width: 75
-        height: 19
+        x: 304
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: host_mouth_2
       rect:
         serializedVersion: 2
-        x: 723
-        y: 86
-        width: 75
-        height: 35
+        x: 608
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,10 +233,10 @@ TextureImporter:
       name: host_mouth_3
       rect:
         serializedVersion: 2
-        x: 1027
-        y: 99
-        width: 75
-        height: 22
+        x: 912
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +255,10 @@ TextureImporter:
       name: host_mouth_4
       rect:
         serializedVersion: 2
-        x: 1330
-        y: 105
-        width: 77
-        height: 16
+        x: 1216
+        y: 0
+        width: 302
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,7 +277,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 586e8962e95fa00478741b49dbcddda0
     internalID: 0
     vertices: []
     indices: 
