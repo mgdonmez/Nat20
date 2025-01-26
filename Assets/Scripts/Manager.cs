@@ -6,6 +6,7 @@ using System.Linq;
 using UnityEngine.UIElements.Experimental;
 using System.Reflection;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public enum DemographicType
 {
@@ -235,7 +236,14 @@ public class Manager : MonoBehaviour
                 FunctionTimer.Create(() => this.host.Next(), newsSpeechLength);
                 if (this.newsSections[index] != null)
                 {
+                    Transform newsCardTransform = this.newsSections[index].transform;
                     NewsCard newsSectionCard = this.newsSections[index].GetComponent<CardBehaviour>().CardInfo;
+                    Vector3 originalScale = newsCardTransform.localScale;
+                    Vector3 hoverScale = newsCardTransform.localScale * 1.2f;
+                    newsCardTransform.DOScale(hoverScale, 0.3f);
+                    FunctionTimer.Create(() => newsCardTransform.DOScale(originalScale, 0.3f), newsSpeechLength);
+
+
                     foreach (DemographicType dt in newsSectionCard.AffectedPopulation)
                     {
                         Demographic affectedDemographic = this.population[(int)dt];
