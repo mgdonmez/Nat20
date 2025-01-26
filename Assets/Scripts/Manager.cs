@@ -62,6 +62,7 @@ public class Manager : MonoBehaviour
     [SerializeField] private Sprite liveButtonFree;
     [SerializeField] private bool isLive;
     [SerializeField] private Button rerollButton;
+    [SerializeField] private GameObject coins;
     [SerializeField] private GameObject cardPrefab;
 
     public static Manager Instance;
@@ -112,6 +113,12 @@ public class Manager : MonoBehaviour
         if (!this.isLive)
         {
             this.rerollButton.interactable = this.budget >= this.rerollCost;
+        }
+
+        for (int i = 0; i < this.coins.transform.childCount; i++)
+        {
+            SpriteRenderer coin = this.coins.transform.GetChild(i).GetComponent<SpriteRenderer>();
+            coin.enabled = (budget - 1) >= i;
         }
     }
 
@@ -213,7 +220,7 @@ public class Manager : MonoBehaviour
                         if (newsSectionCard.Genuinity == Genuinity.Truth)
                         {
                             this.newsSectionsProfitability[index] = true;
-                            affectedDemographic.ViewerRatio *= 1.2f;
+                            affectedDemographic.ViewerRatio = Mathf.Min(1.0f, affectedDemographic.ViewerRatio * 1.2f);
                         }
                         else
                         {
@@ -222,6 +229,7 @@ public class Manager : MonoBehaviour
                             bool deceptionSuccess = deceptionCheck >= affectedDemographic.WisdomSaveDC();
                             profitability &= deceptionSuccess;
                             affectedDemographic.ViewerRatio *= deceptionSuccess ? 1.3f : 0.5f;
+                            affectedDemographic.ViewerRatio = Mathf.Max(Mathf.Min(affectedDemographic.ViewerRatio * (deceptionSuccess ? 1.3f : 0.5f), 1.0f), 0.01f / affectedDemographic.Ratio);
                         }
                         affectedDemographic.WisdomSaveDCBonus += newsSectionCard.WisdomSaveDCEffect;
                     }
@@ -245,7 +253,7 @@ public class Manager : MonoBehaviour
                 foreach (DemographicType dt in newsSectionCard.AffectedPopulation)
                 {
                     Demographic affectedDemograpic = this.population[(int)dt];
-                    this.budget += affectedDemograpic.ViewerRatio * affectedDemograpic.Ratio * sectionRevenue;
+                    this.budget = Mathf.Min(this.budget + affectedDemograpic.ViewerRatio * affectedDemograpic.Ratio * sectionRevenue, 6.0f);
                 }
             }
         }
