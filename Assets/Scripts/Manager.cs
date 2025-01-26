@@ -7,6 +7,7 @@ using UnityEngine.UIElements.Experimental;
 using System.Reflection;
 using UnityEngine.UI;
 using DG.Tweening;
+using NUnit.Framework;
 
 public enum DemographicType
 {
@@ -213,8 +214,9 @@ public class Manager : MonoBehaviour
         FunctionTimer.Create(() => this.host.Next(), timer);
         timer += nextGingleLength;
         DetermineNewsEffect(timer);
-        timer += newsSpeechLength * 3 + nextGingleLength * 3;
-        FunctionTimer.Create(()=>this.host.Ending(), timer);
+        int nullCount = this.newsSections.Count(item => item == null);
+        timer += (newsSpeechLength + nextGingleLength) * (3 - nullCount);
+        FunctionTimer.Create(() => this.host.Ending(), timer);
         timer += newsEndingLength;
         FunctionTimer.Create(() => this.host.Outro(), timer);
         timer += newsEndingJingleLength + 0.1f;
@@ -230,12 +232,13 @@ public class Manager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             int index = i;
-            FunctionTimer.Create(() =>
+            if (this.newsSections[index] != null)
             {
-                this.host.News();
-                FunctionTimer.Create(() => this.host.Next(), newsSpeechLength);
-                if (this.newsSections[index] != null)
+                timer += (newsSpeechLength + nextGingleLength);
+                FunctionTimer.Create(() =>
                 {
+                    this.host.News();
+                    FunctionTimer.Create(() => this.host.Next(), newsSpeechLength);
                     Transform newsCardTransform = this.newsSections[index].transform;
                     NewsCard newsSectionCard = this.newsSections[index].GetComponent<CardBehaviour>().CardInfo;
                     Vector3 originalScale = newsCardTransform.localScale;
@@ -263,12 +266,12 @@ public class Manager : MonoBehaviour
                         }
                         affectedDemographic.WisdomSaveDCBonus += newsSectionCard.WisdomSaveDCEffect;
                     }
-                }
-                else
-                {
-                    this.newsSectionsProfitability[index] = false;
-                }
-            }, i * (newsSpeechLength + nextGingleLength) + timer);
+                }, timer);
+            }
+            else
+            {
+                this.newsSectionsProfitability[index] = false;
+            }
         }
     }
 
